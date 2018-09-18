@@ -1,0 +1,34 @@
+.seffect-thumb{
+    display: inline-block;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    @include border-radius(4px);
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    @include trans-all(0.4s);
+    vertical-align: top;
+    
+    &:hover{
+        background: #FCFCFC;    
+    }
+    
+    &.active {
+        background: #007bff !important;
+        b {
+            color: #FFF;
+        }
+    }
+    
+    img,b {
+        display: inline-block;
+        max-height: 100%;
+        max-width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    b{ font-size: 1.2em; }
+}

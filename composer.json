@@ -1,0 +1,18 @@
+{
+    "autoload": {
+        "psr-4": {
+            "spir1donov\\": "classes/",
+            "Sart\\":"classes/"
+        },
+        "config": {
+            "use-include-path": true
+        }
+    },
+    "require": {
+        "twbs/bootstrap": "4.0.0-beta.2",
+        "components/jquery": "^3.2",
+        "fortawesome/font-awesome": "^4.7",
+        "phpmailer/phpmailer": "^6.0",
+        "james-heinrich/phpthumb": "^1.7"
+    }
+}

@@ -1,0 +1,9 @@
+a.sort_asc:after,a.sort_desc:after {
+    font-family:'FontAwesome';
+    display: inline;
+    padding: 0 4px;
+    content: "\f160";
+}
+a.sort_desc:after {
+    content: "\f161";
+}

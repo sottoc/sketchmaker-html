@@ -1,0 +1,113 @@
+@mixin css-overlay() {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+@mixin trans-all($duration)
+{
+    -webkit-transition: all ease $duration;
+    -moz-transition: all ease $duration;
+    transition: all ease $duration;
+}
+
+@mixin border-radius($rad)
+{
+    -moz-border-radius: $rad;
+    -webkit-border-radius: $rad;
+    border-radius: $rad;
+}
+
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+.loading {
+    position: relative;
+    
+    &:after {
+        @include css-overlay();
+        @include trans-all(1s);
+        background: #FFF url(../img/content-loader.gif) no-repeat center center;
+    }
+    &.loaded
+    {
+        &:after {
+            opacity: 0;
+        }
+    }
+}
+
+.nav-link.active.bg-grey {
+    background-color: #fdfdfe;
+    border-bottom-color: #fdfdfe;
+}

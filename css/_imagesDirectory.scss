@@ -1,0 +1,132 @@
+#imagesDirectory{
+    
+    &Wrap {
+        min-height: 400px;
+        width: 100%; 
+    }
+    &TabsWrap{
+        max-height: 484px;    
+    }
+
+    &TabsNavWrap{
+        max-height: 500px;          
+        .simplebar-content {
+            overflow-x: visible;
+        }
+        ul{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.collapsed {
+    #imagesDirectoryTabsWrap{
+        max-height: 726px;
+    }
+    #imagesDirectoryTabsNavWrap{
+        max-height: 742px;
+    }
+}
+.image-list-item{position: relative;
+    height: 100%;
+    width:100%;
+    text-align: center;
+  
+    img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .delete, .load-image {
+        display: none;
+        position: absolute;
+        top:1px;
+        right: 1px;
+        @include trans-all(2s);
+        cursor: pointer;
+        
+    }
+    
+    .img-svg {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    
+    .load-image + .delete{
+        margin-top: 40px;
+    }
+    
+    &:hover
+    {
+        .load-image{
+            display: block;
+            -webkit-animation: fadeInFromNone 0.5s ease-out;
+            -moz-animation: fadeInFromNone 0.5s ease-out;
+            -o-animation: fadeInFromNone 0.5s ease-out;
+            animation: fadeInFromNone 0.5s ease-out;            
+        }
+    }
+}
+
+
+
+.allowDelete.image-list-item:hover .delete{
+    display: block;
+    -webkit-animation: fadeInFromNone 0.5s ease-out;
+    -moz-animation: fadeInFromNone 0.5s ease-out;
+    -o-animation: fadeInFromNone 0.5s ease-out;
+    animation: fadeInFromNone 0.5s ease-out;
+}
+
+.qq-uploader{
+    .collapsed &.qq-gallery{
+        min-height: 75px;
+        height: 75px;
+        
+        &:before, .qq-upload-list{
+            display: none;
+        }
+    }
+    .qq-collapse{
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: none;
+        border:none;
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        color: #CCC;
+        @include trans-all(0.5s);
+        cursor: pointer;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    .qq-collapse:hover {
+        color: #333;
+    }
+    
+    .qq-thumbnail-wrapper{
+        .load-image {
+            display: none;
+            position: absolute;
+            top:2px;
+            right: 2px;
+            @include trans-all(2s);
+            cursor: pointer;
+        
+        }
+         &:hover
+        {
+            .load-image{
+                display: block;
+                -webkit-animation: fadeInFromNone 0.5s ease-out;
+                -moz-animation: fadeInFromNone 0.5s ease-out;
+                -o-animation: fadeInFromNone 0.5s ease-out;
+                animation: fadeInFromNone 0.5s ease-out;            
+            }
+        }
+    }
+}
+
+

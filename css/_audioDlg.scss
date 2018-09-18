@@ -1,0 +1,33 @@
+.attachAudioToItem{
+    min-width: 100px;
+    &.attached {
+        background: #CCC;
+        color:#333;
+        border: 1px solid #CCC;
+        font-weight: bold;
+        span{
+
+            display: inline-block !important;
+            margin-right: 4px;
+        }
+        &:hover{
+            background: darken(#CCC,10%);
+        }
+    }
+}
+#modalAddAudioItem .qq-gallery .qq-upload-list li {
+    height: 80px;
+}
+
+#modalAudioRecorder {
+    span#AudioRecorderTimer {
+        display:  block;
+        font-size: 40px;
+    }
+    .hidden {
+        display: none;
+    }
+    .text-center {
+        margin-bottom: 1em;
+    }
+}

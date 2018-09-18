@@ -1,0 +1,28 @@
+.hand-thumb{
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    @include border-radius(4px);
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    @include trans-all(0.4s);
+    
+    &:hover{
+        background: #FCFCFC;    
+    }
+    
+    &.active {
+        background: #007bff !important;  
+    }
+    
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

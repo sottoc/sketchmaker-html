@@ -1,0 +1,29 @@
+.audio-playlist.list-group .list-group-item:first-child {
+    border-top: none;
+    border-radius: 0;
+}
+.audio-playlist.list-group .list-group-item:last-child{
+    border-bottom: none;
+    border-radius: 0;
+}
+.audio-label-added { line-height: 14px; height: 20px; margin-top: 6px;}
+.audio-label-duration { font-size: 0.8em; color: #CCC; vertical-align: baseline; padding-left: 10px; }
+.playlist-item {
+    h5 {
+        max-width:  400px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+.audio-playlist .list-group-item.active {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+#uploadAudioFile {
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    cursor: pointer;
+}
